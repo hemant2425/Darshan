@@ -1,0 +1,70 @@
+#create numpy array
+import numpy as n
+#one dimensional array 
+arr = n.array([3,5,9,7,11,51,18,22])
+print("__One dimensionaal array :__","\n",arr,"\n")
+
+#convert one dimensional array too two dimensional array
+arr2d = arr.reshape(2,4)
+print("__converting one dimensional array tooTwo dimensionaal array :__","\n",arr2d,"\n")
+
+#convert one dimensional array too three dimensional array
+arr3 = n.array([1,2,3,4,5,6,7,8,9])
+#converting 1_d too 3_d array
+arr3d = arr3.reshape(3,3)
+print("__Three dimensionaal array :__","\n",arr3d,"\n")
+
+# negative slicing function in numpy
+#Slice Starting from 3rd value to end
+print("__Slice Starting from 3rd value to end:__\n",arr[2:],"\n")
+
+#findthe data type of an array
+print("__finding the data type of an array:__\n",arr.dtype,"\n")
+print("__finding the data type of an array 2d array:__\n",arr2d.dtype,"\n")
+print("__finding the data type of an array 3d array:__\n",arr3d.dtype,"\n")
+
+#concatenate two array
+arr4 = n.array([0,1,2,3,4,5,6,7,8])
+arr5 = n.concatenate((arr3,arr4))
+print("__concatenate two array :__","\n",arr5,"\n")
+
+#Use np.stack() function to Join Array3,Array4
+arr7 =n.stack((arr3,arr4))
+print("Use np.stack() function to Join Arrays\n",arr7,"\n")
+
+#Use Stacking Along Rows
+arr8 =n.hstack((arr3,arr4))
+print("Use np.hstack() function to Join Arrays\n",arr8,"\n")
+
+#Use Stacking Along column
+arr9 =n.vstack((arr3,arr4))
+print("Use np.vstack() function to Join Arrays\n",arr9,"\n")
+
+#Use Stacking Along Height 
+arr10 =n.dstack((arr3,arr4))
+print("Use np.dstack() function to Join Arrays\n",arr10,"\n")
+
+arr = n.array([3,5,9,7,11,51,18,22])
+#numpy aggregatation function in array
+print("Mean: ",n.mean(arr),"\n")
+print("Min : ",n.min(arr),"\n")
+print("Meax: ",n.max(arr),"\n")
+print("Sum: ",n.sum(arr),"\n")
+print("Product: ",n.prod(arr),"\n")
+print("Standard Deviation: ",n.std(arr),"\n")
+
+arr = n.array([3,5,9,7,11,51,18,22])
+#Filter command __[<]__ which is used in numpy firt give a condition then satisfy it by new array
+filter_ex = arr < 20
+arr12 = n.array([filter_ex])
+print("__ lesser Filter command in numpy:__","\n",arr12,"\n")
+
+#Filter command __[]>]__which is used in numpy firt give a condition then satisfy it by new array
+filter_ex = arr > 20
+arr13 = n.array([filter_ex])
+print("__ Greater Filter command in numpy:__","\n",arr13,"\n")
+
+#Filter command _[%]__which is used in numpy firt give a condition then satisfy it by new array
+filter_ex = arr % 20
+arr14 = n.array([filter_ex])
+print("__ percentage Filter command in numpy:__","\n",arr14,"\n")
